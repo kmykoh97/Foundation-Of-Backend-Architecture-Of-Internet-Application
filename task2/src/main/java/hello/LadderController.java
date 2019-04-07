@@ -20,22 +20,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import hello.ServiceOne;
 
 
-/*
-@Configuration
-public class MvcConfig implements WebMvcConfigurer {
-
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/home").setViewName("home");
-        registry.addViewController("/").setViewName("home");
-        registry.addViewController("/hello").setViewName("hello");
-        registry.addViewController("/login").setViewName("login");
-    }
-
-
-
-}
-*/
-
 @Controller
 public class LadderController {
 
@@ -50,11 +34,11 @@ public class LadderController {
         return "home";
     }
 
-//    @RequestMapping("/login")
-//    String login() {
-//        logger.info("I'm Login page.");
-//        return "login";
-//    }
+    @RequestMapping("/login")
+    String login() {
+        logger.info("I'm Login page.");
+        return "login";
+    }
 
     @RequestMapping("/output")
     String output() {
@@ -71,7 +55,7 @@ public class LadderController {
 
     @GetMapping("/wordladder")
     public String wordladder(Model model, @RequestParam(value="start", required=true) @NotBlank String start, @RequestParam(value="end", required=true) @NotBlank String end) {
-        Lexicon lexicon=new Lexicon("https://raw.githubusercontent.com/kmykoh97/Foundation-Of-Backend-Architecture-Of-Internet-Application/tree/master/task2/src/main/resources/dictionary.txt");
+        Lexicon lexicon=new Lexicon("https://raw.githubusercontent.com/kmykoh97/Foundation-Of-Backend-Architecture-Of-Internet-Application/master/task2/src/main/resources/dictionary.txt");
         logger.info("start finding wordladder from "+start+" to "+end+" "  );
         logger.info("wait for a sec to comlete finding wordladder, this would take about 20 seconds.");
         WordLadder wordladder=new WordLadder(start,end,lexicon.getDictionary());
