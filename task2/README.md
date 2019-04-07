@@ -1,4 +1,4 @@
-# Word Ladder
+# Word Ladder (Revisited using REST api)
 
 ## How to use
 
