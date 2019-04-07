@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: hello.ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 7.16 s <<< FAILURE! - in hello.ApplicationTests
+accessUnsecuredResourceThenOk(hello.ApplicationTests)  Time elapsed: 0.266 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at hello.ApplicationTests.accessUnsecuredResourceThenOk(ApplicationTests.java:50)
+
+accessSecuredResourceUnauthenticatedThenRedirectsToLogin(hello.ApplicationTests)  Time elapsed: 0.047 s  <<< FAILURE!
+java.lang.AssertionError: Range for response status value 404 expected:<REDIRECTION> but was:<CLIENT_ERROR>
+	at hello.ApplicationTests.accessSecuredResourceUnauthenticatedThenRedirectsToLogin(ApplicationTests.java:56)
+
+loginWithValidUserThenAuthenticated(hello.ApplicationTests)  Time elapsed: 0.016 s  <<< FAILURE!
+java.lang.AssertionError: Authentication should not be null
+	at hello.ApplicationTests.loginWithValidUserThenAuthenticated(ApplicationTests.java:34)
+
+accessSecuredResourceAuthenticatedThenOk(hello.ApplicationTests)  Time elapsed: 0.031 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<200> but was:<404>
+	at hello.ApplicationTests.accessSecuredResourceAuthenticatedThenOk(ApplicationTests.java:64)
+
