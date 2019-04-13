@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: hello.ApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.14 s <<< FAILURE! - in hello.ApplicationTests
-accessUnsecuredResourceThenOk(hello.ApplicationTests)  Time elapsed: 0.316 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<401>
-	at hello.ApplicationTests.accessUnsecuredResourceThenOk(ApplicationTests.java:50)
-
-accessSecuredResourceUnauthenticatedThenRedirectsToLogin(hello.ApplicationTests)  Time elapsed: 0.026 s  <<< FAILURE!
-java.lang.AssertionError: Range for response status value 401 expected:<REDIRECTION> but was:<CLIENT_ERROR>
-	at hello.ApplicationTests.accessSecuredResourceUnauthenticatedThenRedirectsToLogin(ApplicationTests.java:56)
-
-accessSecuredResourceAuthenticatedThenOk(hello.ApplicationTests)  Time elapsed: 0.063 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<404>
-	at hello.ApplicationTests.accessSecuredResourceAuthenticatedThenOk(ApplicationTests.java:64)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.529 s - in hello.ApplicationTests
