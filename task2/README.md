@@ -10,6 +10,11 @@
 
 Please note that due to testing and security prerequisite, word ladder would need some time before showing out. Please wait patiently
 
+## Update 25/4/2019
+
+- Added Dockerfile
+- Docker images pushed to kmykoh/wordladder-rest tag:firsttry
+
 ## Special Thanks
 
 Ren Rui from School of Software Engineering Shanghai Jiao Tong University for guiding us throughout this project
