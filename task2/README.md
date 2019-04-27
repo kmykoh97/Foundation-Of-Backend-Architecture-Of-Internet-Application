@@ -1,24 +1,49 @@
-# Word Ladder (Revisited using REST api with Spring Security embedded)
+# Resources Consumption Of REST Service
 
-## How to use
+## Method
 
-- Import the project to Intellij IDEA Ultimate using pom.xml in the project directory
-- Initialise Tomcat server
-- Run the project and deploy it
-- In browser, run http://localhost:8080
-- Enjoy Word Ladder!
+Get the detail of various endpoints using Spring Actuator
 
-Please note that due to testing and security prerequisite, word ladder would need some time before showing out. Please wait patiently
+## Memory & CPU Usage
 
-## Update 25/4/2019
+### Startup
 
-- Added Dockerfile
-- Docker images pushed to kmykoh/wordladder-rest tag:firsttry
+![alt text](img/1.png)
+![alt text](img/2.PNG)
+
+40292573184 bytes ram usage
+0% CPU utilised
+
+### Importing Dictionary
+
+![alt text](img/3.PNG)
+![alt text](img/4.PNG)
+
+40297500672 bytes ram usage
+17% CPU utilised
+
+### After Result
+
+![alt text](img/5.PNG)
+![alt text](img/6.PNG)
+
+40296165375 bytes ram usage
+19% CPU utilised
+
+### Hooraay! Success
+
+![alt text](img/7.PNG)
+
+## Logical Explanation
+
+- 0% CPU during startup due to Spring Boot doing all the backend in background and stop process automatically when not in use
+- Increasing RAM usage when importing dictionary until getting dictionary because dictionary is imported and stored in computer memory as data structure. Data not dumped by system
+- Decreasing CPU consumption in the end because Spring Security still running in background but dictionary importing and parsing has completed
 
 ## Special Thanks
 
-Ren Rui from School of Software Engineering Shanghai Jiao Tong University for guiding us throughout this project
+Ren Rui from School Of Software Engineering, Shanghai Jiao tong University for guiding us throughout the session
 
-## Author
+## Author's Details
 
 Meng Yit Koh 517030990022
