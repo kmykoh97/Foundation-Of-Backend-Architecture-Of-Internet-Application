@@ -14,6 +14,7 @@ Please note that due to testing and security prerequisite, word ladder would nee
 
 - Added Dockerfile
 - Docker images pushed to kmykoh/wordladder-rest tag:firsttry
+- Docker link: https://hub.docker.com/r/kmykoh/wordladder-rest
 
 ## Special Thanks
 
